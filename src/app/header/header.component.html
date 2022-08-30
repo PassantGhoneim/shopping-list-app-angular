@@ -1,0 +1,61 @@
+<nav class="my-nav-bar navbar navbar-expand-lg bg-light">
+    <div class="my-nav-bar-items container-fluid">
+      <a class="navbar-brand" [routerLink]="'/'">GLAM SHOP</a>
+      <div class="my-nav-bar-dropdowns collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="my-nav-bar-list navbar-nav me-auto mb-2 mb-lg-0">
+
+          
+
+          
+          <li class=" my-dropdown-profile-nav-item nav-item dropdown">
+            <div class="col">
+              <div ngbDropdown class="d-inline-block">
+                <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle> 
+                  <div class="img-container">
+                  <img src="../../assets/passant.jpg" alt="">
+                  </div>
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button ngbDropdownItem>View/Edit Profile</button>
+                  <button ngbDropdownItem>Sign Out</button>
+                 
+                </div>
+              </div>
+            </div>
+          </li>
+         
+
+
+          <li class="my-dropdown-cart-nav-item nav-item dropdown">
+            
+            
+            <div class="col">
+              <div ngbDropdown class="d-inline-block">
+                <button type="button" class="btn btn-outline-primary " id="dropdownBasic1" ngbDropdownToggle>
+                  <div class="cart-container">
+                    <mat-icon>shopping_cart</mat-icon>
+                  </div>
+                </button>
+                  
+                <div class="cart-container" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <div ngbDropdownItem><app-cart></app-cart></div>
+                  
+                </div>
+              </div>
+            </div>
+          </li>
+
+          
+          
+
+
+
+
+
+        </ul>
+       
+      </div>
+    </div>
+  </nav>
+
+  

@@ -1,0 +1,30 @@
+
+<div class="form-container">
+
+
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <label for="">Address</label><br>
+        <input type="text" 
+               ngModel
+               name="address"
+               required> <br>
+        <label for="">Phone</label><br>
+        <input type="phone"
+               ngModel
+               name="phone"
+               required> <br>
+        <label for="">E-mail</label><br>
+        <input type="email"
+               ngModel
+               name="email"
+               required
+               email><br>
+        <button type="submit"
+                [disabled]="!f.valid"
+        
+        >Submit</button>
+    </form>
+
+</div>
+
+

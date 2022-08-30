@@ -1,0 +1,64 @@
+<main class="main-container">
+
+   <div class="edit-container">
+
+    <input class="search-input" type="text" placeholder="search" [(ngModel)]="searchText">
+    <button><mat-icon> format_list_bulleted</mat-icon></button>
+
+   </div>
+  
+
+  
+
+
+  <div class=" shopping-list-container album py-5 bg-light">
+
+   
+     <div  *ngFor="let card of cards |filterPipe:searchText:'name'">
+      
+
+       <div class="  row">
+          
+        
+
+         <div class="col-md-4"  >
+             <div class=" card-container card mb-4 shadow-sm">
+                 <div class="img-container">
+                     <img class="card-img-top" [src]="card.url" alt="Card image cap">
+                 </div>
+                   
+                 <div class="text-container">
+                     
+                         <a  [routerLink]="['/detailView',card.id,card.category,card.name]">
+                                   {{ card.name }}
+                         </a>
+                          <p class="product-category">Category: {{card.category}}
+                            <br>
+                            Price: {{card.price}} L.E
+                          </p>
+                          
+
+                         
+                    
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                         <button type="button" class="btn btn-sm btn-outline-secondary" (click)="addToCart(card)">Add to card</button>
+                         
+                        </div>
+                     
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+        
+         
+       </div>
+     </div>
+   </div>
+
+
+
+   
+</main>
+     

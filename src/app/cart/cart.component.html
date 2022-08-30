@@ -1,0 +1,68 @@
+<div class="cart-container" *ngFor="let addedProduct of cart ">
+
+    <div class="product-container">
+        <div class="details-container">
+
+            <p> {{addedProduct.name}} | Price:{{addedProduct.price}}</p>
+            
+
+        </div>
+
+        <div class="control-container">
+            <input type="number" pattern="^[1-9]+[0-9]*$" class="input-field" [value]="'addedProduct.quantity'">
+            <button class="remove-button"(click)="removeFromCart(addedProduct.id)"  >
+               <mat-icon  >	delete</mat-icon>
+            </button>
+            
+        </div>
+        
+        
+    </div>
+    
+    <button routerLink="/submitForm"
+            [disabled]=""
+            class="sumbit-button">Submit
+
+    </button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="cart-container"  >
+   <div class="selected-products">
+       <div class="img-container">
+           <img src="" alt="">
+       </div>
+       <h3>name</h3>
+       <input type="number"
+              pattern="^[1-9]+[0-9]*$">
+       <button>
+
+        <mat-icon>clear</mat-icon>
+
+       </button>
+       
+   </div>
+   <button routerLink="/submitForm"
+           [disabled]="">
+
+    Submit
+
+   </button>
+
+
+</div> -->
