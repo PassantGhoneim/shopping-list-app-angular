@@ -3,7 +3,7 @@
    <div class="edit-container">
 
     <input class="search-input" type="text" placeholder="search" [(ngModel)]="searchText">
-    <button><mat-icon> format_list_bulleted</mat-icon></button>
+    <button (click)="convertToGrid()"><mat-icon> format_list_bulleted</mat-icon></button>
 
    </div>
   
@@ -11,18 +11,19 @@
   
 
 
-  <div class=" shopping-list-container album py-5 bg-light">
+  <div class=" shopping-list-container   album py-5 bg-light"  [ngClass]="{'grid-view' :gridflag}"
+     >
 
    
-     <div  *ngFor="let card of cards |filterPipe:searchText:'name'">
+     <div class="shopping-list-item" *ngFor="let card of cards |filterPipe:searchText:'name'">
       
 
-       <div class="  row">
+       <div class=" card-container row">
           
         
 
-         <div class="col-md-4"  >
-             <div class=" card-container card mb-4 shadow-sm">
+         <div class="  col-md-4"  >
+             <div class=" card-content card mb-4 shadow-sm">
                  <div class="img-container">
                      <img class="card-img-top" [src]="card.url" alt="Card image cap">
                  </div>
@@ -46,7 +47,7 @@
                          
                         </div>
                      
-                     </div>
+                  </div>
                  </div>
              </div>
          </div>

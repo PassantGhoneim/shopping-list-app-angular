@@ -15,7 +15,7 @@ import { SelectedProducts } from './shared/selected-products.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon'
 import { FormsModule } from '@angular/forms';
-import { FilterPipePipe } from './filter-pipe.pipe';
+import { FilterPipePipe } from './shared/filter-pipe.pipe';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 

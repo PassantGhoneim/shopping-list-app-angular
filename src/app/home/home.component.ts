@@ -14,8 +14,8 @@ import { Product } from '../shared/product';
 export class HomeComponent implements OnInit {
 
   searchText:string;
-
   cards:Product[];
+  gridflag:boolean=false;
 
   
   
@@ -23,8 +23,7 @@ export class HomeComponent implements OnInit {
  
 
   constructor(private shoppingListService:ShoppingListService,
-              private router:Router,
-              private route:ActivatedRoute,
+         
               private selectedProducts:SelectedProducts
             
     ) { }
@@ -33,20 +32,55 @@ export class HomeComponent implements OnInit {
 
 
     this.cards=this.shoppingListService.getCard();
+    
+    
   }
+
+
+  // addToCart(productId:number){
+
+  //   for(let product of this.shoppingListService.getCard()){
+
+  //     if(product.id===productId){
+  //       product.quantity+=1;
+        
+  //     }
+
+  //   }
+  //   console.log(this.shoppingListService.getCard())
+
+  // }
+
+
+
 
   addToCart(selectedProduct:Product){
 
-   
-
+    // console.log(selectedProduct.quantity);
+    // if(selectedProduct.quantity===0){
+    //   selectedProduct.quantity+=1;
+    // console.log(selectedProduct);
     
+      
+    //   this.selectedProducts.addSelectedProduct(selectedProduct);
+
+    // }
+    // else if (selectedProduct.quantity>0){ 
+
+    //   selectedProduct.quantity+=1;
+    //   console.log(selectedProduct);
+      
+
+    // }
+    
+
     this.selectedProducts.addSelectedProduct(selectedProduct)
-  
-    
+  }
 
+  convertToGrid(){
+    this.gridflag=!this.gridflag;
+   
     
-    
-
   }
 
 

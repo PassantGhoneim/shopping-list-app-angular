@@ -19,10 +19,10 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.cart=this.selectedProducts.products;
-     for(let product of this.cart){
-      console.log(product.quantity)
 
-     }
+
+  //  this.cart=this.shoppingListService.getCard().filter(product=>product.quantity>0)
+     
      
   }
 

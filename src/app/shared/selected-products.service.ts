@@ -4,7 +4,7 @@ export class SelectedProducts{
     
 
      addSelectedProduct(selectedProduct:Product) {
-      selectedProduct.quantity+=1
+      
       this.products.push(selectedProduct);
         
         
